@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" 
+       android:layout_alignParentTop="true"
+       android:background="@drawable/rectange"
+       android:id="@+id/chat_title"
+       android:orientation="horizontal">
+       
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="消息(0)"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:onClick="back"
+            android:id="@+id/chat_title_message"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:text="chat"
+            android:textColor="@android:color/white"
+            android:layout_margin="10dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:id="@+id/chat_title_name"/>"
+           
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rectange"
+        android:orientation="horizontal" >
+        
+        <ImageButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chat_icon_smiles"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            android:onClick="showEmoticon"
+            android:id="@+id/emoticon"
+            />"
+        <EditText 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_margin="10dp"
+            android:id="@+id/chat_bottom_content"
+            android:layout_weight="2.0"/>
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="发送"
+            android:textColor="@android:color/white"
+            android:layout_gravity="bottom"
+            android:id="@+id/chat_bottom_send"/>
+        
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/chat_title"
+        android:layout_above="@id/chat_bottom"
+        android:fadingEdge="none"
+        android:background="#f0f0f0"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:id="@+id/chat_list"
+        android:divider="#aaaaaa"
+        android:dividerHeight="0px"
+        /><!-- driver是用来去掉listview下面的线的 -->
+    
+    
+
+</RelativeLayout>
